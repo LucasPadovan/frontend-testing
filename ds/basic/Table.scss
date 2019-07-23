@@ -1,0 +1,37 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+$table-border: 1px solid $brand-primary;
+
+.styled-table {
+    border-radius: $grid-unit;
+    border: $table-border;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.styled-table__header-row__title,
+.styled-table__body-row-item {
+    padding: $grid-unit * 3;
+    border: $table-border;
+}
+
+.styled-table__body-row {
+    transition: all 240ms ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.styled-table__body-row-item__image {
+    width: auto;
+    height: 100px;
+}
+
+.styled-table__body-row-item__actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

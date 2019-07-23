@@ -1,0 +1,12 @@
+@import '../../../../ds/settings/Settings.scss';
+
+.image-overlap__container,
+.image-overlap__wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none;
+}

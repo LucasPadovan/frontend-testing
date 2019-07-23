@@ -1,0 +1,9 @@
+# temp files
+.DS_Store
+.eslintcache
+.meteor
+.vscode
+.deploy
+
+# dependencies
+node_modules/

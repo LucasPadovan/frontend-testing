@@ -1,0 +1,45 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+$border-width: 2px;
+$border-color: black;
+$border-color--gradient: linear-gradient(270deg, $brand-primary 0%, $brand-secondary 100%);
+
+.card {
+    position: relative;
+    border-radius: $grid-unit;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: $grid-unit;
+        background: $border-color;
+
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: $border-width;
+        right: $border-width;
+        bottom: $border-width;
+        left: $border-width;
+        border-radius: $grid-unit;
+        background-color: $white;
+
+        z-index: -1;
+    }
+}
+
+
+.card--gradient {
+    &:before {
+        background-image: $border-color--gradient;
+    }
+}

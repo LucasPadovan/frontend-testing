@@ -1,0 +1,42 @@
+/* START: Colors */
+$white: #ffffff;
+$gray-98: #f3f3f3;
+$gray-95: #EDEDED;
+$gray-90: #E3E3E3;
+$gray-85: #D9D9D9;
+$gray-80: #CCCCCC;
+$gray-75: #C0C0C0;
+$gray-70: #B0B0B0;
+$gray-60: #999999;
+$gray-50: #808080;
+$gray-45: #727272;
+$gray-40: #696969;
+$gray-30: #4D4D4D;
+$gray-20: #363636;
+$gray-15: #222222;
+$gray-10: #171717;
+$black: #000000;
+
+$ui-active: green;
+$ui-active--contrast: $white;
+$ui-active--darken: darken($ui-active, 10%);
+$ui-disabled: $gray-45;
+$ui-disabled--contrast: $white;
+$ui-disabled--darken: darken($ui-disabled, 10%);
+
+$ui-warning: yellow;
+$ui-danger: #b13c3c;
+$ui-success: green;
+$ui-info: cyan;
+
+$brand-primary: limegreen;
+$brand-secondary: violet;
+
+
+/* END: Colors */
+
+/* START: Navbar */
+$navbar-bg: $white;
+$footer-bg: $gray-15;
+$footer-text: $gray-85;
+/* END: Navbar */

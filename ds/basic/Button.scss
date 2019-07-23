@@ -1,0 +1,89 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+$button-border-width: 2px;
+$button-height--small: 30px;
+$button-height: 40px;
+$button-min-width--small: 140px;
+$button-min-width: 160px;
+$button-padding--mini: 2px 8px;
+$button-padding--small: 4px 16px;
+$button-padding: 8px 24px;
+
+.styled-button {
+    background-color: $white;
+    border-radius: $grid-unit   ;
+    border: $button-border-width solid $gray-10;
+    box-shadow: 7px 7px 13px 0 rgba(0, 0, 0, 0.5);
+    color: $gray-10;
+    cursor: pointer;
+    font-size: $normal-text;
+    height: $button-height;
+    line-height: $normal-lh;
+    min-width: $button-min-width;
+    outline: none;
+    padding: $button-padding;
+    text-align: center;
+    white-space: nowrap;
+
+    transition: all 120ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        background-color: $gray-10;
+        color: $white;
+    }
+
+    &:active {
+        outline: none;
+    }
+
+    &:disabled {
+        color: $gray-40;
+        cursor: default;
+        transform: none;
+        background-color: $gray-85;
+        border-color: $gray-30;
+    }
+
+    /* Sizes variants */
+    &--mini {
+        padding: $button-padding--mini;
+        font-size: $small-text;
+        line-height: $small-lh;
+        min-width: auto;
+        height: $button-height--small;
+    }
+
+    &--small {
+        padding: $button-padding--small;
+        font-size: $small-text;
+        line-height: $small-lh;
+        min-width: $button-min-width--small;
+        height: $button-height--small;
+    }
+    /* Sizes variants */
+
+    /* Types variants */
+    &--primary,
+    &--primary a.styled-button__text {
+        background-color: $ui-active;
+        border-color: $ui-active--darken;
+        color: $ui-active--contrast;
+
+        &:hover,
+        &:focus {
+            background-color: $ui-active--darken;
+        }
+
+        &:active {
+            background-color: $ui-active--darken;
+        }
+
+        &:disabled {
+            background-color: $ui-active--contrast;
+        }
+    }
+    /* Types variants */
+}

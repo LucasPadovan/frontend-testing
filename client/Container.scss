@@ -1,0 +1,60 @@
+$animation-time: 240ms;
+
+@keyframes page-enter-to-right {
+    0% {
+        opacity: 0.01;
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes page-leave-to-right {
+    0% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    60% {
+        opacity: 0.01;
+    }
+
+    100% {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+.enter {
+    opacity: 0.01;
+}
+
+.enter.enter-active {
+    opacity: 1;
+    transition: opacity $animation-time ease-in-out;
+    animation-name: page-enter-to-right;
+    animation-duration: $animation-time;
+    animation-timing-function: ease-in-out;
+}
+
+.exit {
+    opacity: 1;
+}
+
+.exit.exit-active {
+    opacity: 0.01;
+    animation-name: page-leave-to-right;
+    animation-duration: $animation-time;
+    animation-timing-function: ease-in-out;
+}
+
+.body-content > div {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

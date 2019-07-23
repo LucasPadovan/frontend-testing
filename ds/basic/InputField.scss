@@ -1,0 +1,30 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+$input-border-width: 2px;
+$input-padding: 5px 10px;
+
+.input-container {
+    input {
+        border-radius: $grid-unit;
+        background-color: white;
+        font-size: $normal-text;
+        line-height: $normal-lh;
+        border: $input-border-width solid $ui-disabled;
+        padding: $input-padding;
+        outline: none;
+        display: flex;
+        flex-direction: column;
+
+        &:active,
+        &:focus {
+            outline: none;
+            background: white;
+            border-color: $ui-active;
+        }
+    }
+
+    label {
+        font-weight: $bold-text-w;
+    }
+}

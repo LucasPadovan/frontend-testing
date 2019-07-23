@@ -1,0 +1,22 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+.pill {
+    // background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: 1px solid $brand-primary;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+    color: $brand-primary;
+    display: flex;
+    font-size: 14px;
+    height: 40px;
+    line-height: 21px;
+    padding: 8px 32px;
+}
+
+.pill__text {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

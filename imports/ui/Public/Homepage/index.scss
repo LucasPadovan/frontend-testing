@@ -1,0 +1,22 @@
+@import '../../../../ds/settings/Settings.scss';
+@import '../../../../ds/settings/Theme.scss';
+
+.homepage {
+    height: 100%;
+}
+
+.homepage-main {
+    padding: $grid-unit * 5;
+    min-height: calc(100% - 87px); // 87px is the footer height.
+}
+
+.homepage-testing-grounds {
+    position: relative;
+}
+
+@media(min-width: $medium-w) {
+    .homepage-main {
+        padding-left: $grid-unit * 10;
+        padding-right: $grid-unit * 10;
+    }
+}

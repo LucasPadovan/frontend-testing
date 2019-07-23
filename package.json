@@ -1,0 +1,62 @@
+{
+  "name": "reactbase",
+  "private": true,
+  "eslintConfig": {
+    "extends": "@meteorjs/eslint-config-meteor"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.3",
+    "bcrypt": "^2.0.1",
+    "classnames": "^2.2.5",
+    "meteor-node-stubs": "^0.3.2",
+    "moment": "^2.22.2",
+    "popper.js": "^1.14.3",
+    "prop-types": "^15.6.1",
+    "react": "^16",
+    "react-autosuggest": "^9.3.4",
+    "react-dates": "^16.7.0",
+    "react-dom": "^16",
+    "react-flip-move": "^3.0.2",
+    "react-hot-loader": "^4.3.4",
+    "react-router-dom": "^4.2.2",
+    "react-transition-group": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.2.0",
+    "css-loader": "^1.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-meteor": "^5.0.0",
+    "eslint-plugin-react": "^7.8.2",
+    "faker": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.30.0",
+    "webpack-dev-middleware": "^3.6.2",
+    "webpack-hot-middleware": "^2.22.3",
+    "webpack-hot-server-middleware": "^0.5.0",
+    "webpack-meteor-externals": "0.0.5",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "scripts": {
+    "start": "meteor run",
+    "sasslint": "sass-lint --config .sass-lint.yml 'imports/**/*.scss' --verbose --no-exit",
+    "eslint": "eslint --cache --ignore-path .eslintignore ./imports",
+    "deploy": "cd .deploy; mup deploy; cd ..",
+    "lint": "npm run eslint ; npm run sasslint",
+    "tests": "meteor test --once --driver-package meteortesting:mocha --port 3100",
+    "tests:watch": "TEST_WATCH=1 meteor test --driver-package meteortesting:mocha --port 3100"
+  }
+}

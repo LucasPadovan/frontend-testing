@@ -1,0 +1,54 @@
+@import "../../settings/Theme.scss";
+@import "../../settings/Settings.scss";
+
+.nav-container {
+    background-color: $navbar-bg;
+    box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.5);
+}
+
+.nav-wrapper {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.nav-item--brand {
+    text-decoration: none;
+    font-size: $large-text;
+    font-weight: $bolder-text-w;
+
+    .nav-item--brand-part:first-child {
+        color: $brand-primary;
+    }
+
+    .nav-item--brand-part:last-child {
+        color: $brand-secondary;
+    }
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    font-size: 14px;
+    line-height: 21px;
+    font-family: "beton-light";
+}
+
+.nav-menu-container {
+    display: flex;
+    align-items: stretch;
+}
+
+
+@media (max-width: $medium-w) {
+    .nav-toggle-wrapper {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

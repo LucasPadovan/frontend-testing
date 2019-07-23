@@ -1,0 +1,76 @@
+/* START: Paddings and margins */
+// TODO: check if precompiling this is okay or just leave the generator in place
+$spaceamounts: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space * 4}px;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space * 4}px;
+    }
+  }
+
+  .m-#{$space} {
+    margin: #{$space * 4}px;
+  }
+
+  .m-h-#{$space} {
+    margin-left: #{$space * 4}px;
+    margin-right: #{$space * 4}px;
+  }
+
+  .m-v-#{$space} {
+    margin-top: #{$space * 4}px;
+    margin-bottom: #{$space * 4}px;
+  }
+
+  .p-#{$space} {
+    padding: #{$space * 4}px;
+  }
+
+  .p-h-#{$space} {
+    padding-left: #{$space * 4}px;
+    padding-right: #{$space * 4}px;
+  }
+
+  .p-v-#{$space} {
+    padding-top: #{$space * 4}px;
+    padding-bottom: #{$space * 4}px;
+  }
+
+}
+/* END: Paddings and margins */
+
+/* Start: Flex things */
+.flex {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.flex-item-1-1 {
+  flex: 1 1 auto;
+}
+
+.flex-item-0-1 {
+  flex: 0 1 auto;
+}
+
+.flex-item-1-0 {
+  flex: 1 0 auto;
+}
+
+.flex-item-0-0 {
+  flex: 0 0 auto;
+}
+/* END: Flex things */

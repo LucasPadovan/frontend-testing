@@ -1,0 +1,54 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb",
+        "plugin:meteor/recommended"
+    ],
+    "parserOptions": {
+        "allowImportExportEverywhere": true
+    },
+    "plugins": [
+        "meteor"
+    ],
+    "settings": {
+        "import/resolver": "meteor"
+    },
+    "rules": {
+        "no-invalid-this": "off",
+        "no-plusplus": "off",
+        "babel/no-invalid-this": 0,
+        "arrow-parens": ["error", "always"],
+        "import/extensions": false,
+        "import/prefer-default-export": false,
+        "import/unambiguous": "off",
+        "import/no-absolute-path": "off",
+        "import/no-unresolved": "off",
+        "import/no-webpack-loader-syntax": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/no-duplicates": "off",
+        "indent": [
+            "error",
+            4
+        ],
+        "max-len": [
+            "error",
+            { "code": 200, "comments": 160, "tabWidth": 4 }
+        ],
+        "no-lodash-dangle": 0,
+        "no-underscore-dangle": 0,
+        "quote-props": ["error", "consistent"],
+        "react/jsx-indent": 4,
+        "react/jsx-indent-props": [4, 4],
+        "react/jsx-filename-extension": false,
+        "react/prop-types": "skipUndeclared",
+        "react/prefer-stateless-function": false,
+        "react/jsx-boolean-value": false,
+        "jsx-a11y/no-autofocus": false,
+        "jsx-a11y/anchor-is-valid": false
+    }
+}

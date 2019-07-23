@@ -1,0 +1,16 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    > nav,
+    > footer {
+        flex: 0 2 auto;
+    }
+}
+
+.body-container {
+    position: relative;
+    flex: 2 0 auto;
+    overflow: hidden;
+}

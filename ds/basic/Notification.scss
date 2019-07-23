@@ -1,0 +1,83 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 15px;
+    }
+}
+
+@keyframes temporary {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+
+    20% {
+        opacity: 1;
+        right: 15px;
+    }
+
+    80% {
+        opacity: 1;
+        right: 15px;
+    }
+
+    100% {
+        opacity: 0;
+        right: -100px;
+    }
+}
+
+.floating-notification {
+    align-items: center;
+    background: $gray-20;
+    border-radius: $grid-unit;
+    border: 3px solid $white;
+    display: flex;
+    font-size: 16px;
+    justify-content: space-around;
+    padding: 15px 50px;
+    position: fixed;
+    right: 15px;
+    top: 65px;
+    width: 30%;
+
+    transition: all 240ms ease-in-out;
+    animation: appear 1s;
+
+    z-index: 50000;
+
+    &--temporary {
+        opacity: 0;
+        right: -100px;
+
+        animation: temporary 5s;
+    }
+
+    &--success {
+        border-color: $ui-success;
+        color: $ui-success;
+    }
+
+    &--error {
+        border-color: $ui-danger;
+        color: $ui-danger;
+    }
+
+    &--info {
+        border-color: $ui-info;
+        color: $ui-info;
+    }
+
+    &--alert {
+        border-color: $ui-warning;
+        color: $ui-warning;
+    }
+}

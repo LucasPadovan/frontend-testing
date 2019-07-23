@@ -1,0 +1,69 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+.stepper {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepper__value {
+    text-align: center;
+    min-width: 30px;
+}
+
+.stepper__button {
+    position: relative;
+    background: none;
+    border: 2px solid $brand-secondary;
+    border-radius: 16px;
+    color: $brand-secondary;
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    cursor: pointer;
+
+    transition: all 120ms ease-in-out;
+
+    &:disabled {
+        cursor: default;
+        border-color: grey;
+        color: grey;
+    }
+
+    &:focus {
+        outline: none;
+        color: $brand-primary;
+        border-color: $brand-primary;
+    }
+
+    &:active {
+        transform: scale(0.90);
+        color: $brand-secondary;
+        border-color: $brand-secondary;
+
+        &:after {
+            font-size: 26px;
+        }
+    }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    &--decrease:after {
+        content: "-";
+    }
+
+    &--increase:after {
+        content: "+";
+    }
+}

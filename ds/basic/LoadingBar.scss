@@ -1,0 +1,31 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+$bar-height: 16px;
+$bar-animation-time: 2s;
+
+@keyframes left-right {
+    0% {left: -100%; right: 0%;}
+    50% {left: 0%; right: -100%;}
+    100% {left: -100%; right: 0%;}
+}
+
+.loading-bar {
+    background: $brand-primary;
+    height: $bar-height;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &:after {
+        background: linear-gradient(90deg, $brand-primary 0%, $brand-secondary 50%, $brand-primary 100%);
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    
+        animation: $bar-animation-time left-right infinite;
+    }
+}

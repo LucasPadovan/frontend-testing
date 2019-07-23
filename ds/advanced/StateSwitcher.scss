@@ -1,0 +1,19 @@
+@import "../settings/Theme.scss";
+@import "../settings/Settings.scss";
+
+.state-switcher {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 58px;
+    width: 100%;
+    padding: $grid-unit;
+}
+
+@media (min-width: $medium-w) {
+    .state-switcher {
+        justify-content: space-between;
+    }
+}

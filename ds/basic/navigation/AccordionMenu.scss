@@ -1,0 +1,76 @@
+@import "../../settings/Theme.scss";
+@import "../../settings/Settings.scss";
+
+.accordion-menu {
+    background-color: $gray-10;
+    border-radius: $grid-unit;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    left: 0;
+    min-width: 200px;
+    overflow: hidden;
+    position: fixed;
+    transform: translateX(-90%);
+    z-index: 3;
+
+    transition: all 120ms ease-in-out;
+
+    &:hover {
+        transform: translateX(0%);
+    }
+}
+
+.accordion-menu__link {
+    color: white;
+}
+
+.accordion-menu__item {
+    color: white;
+    font-size: 18px;
+    padding: $grid-unit 0;
+    border-right: $grid-unit solid transparent;
+    background-color: $gray-40;
+    cursor: pointer;
+
+    transition: all 200ms ease-in-out;
+    a {}
+
+    &:hover {
+        border-right: $grid-unit solid $brand-primary;
+        background-color: $gray-30;
+    }
+
+    &--active {
+        border-right: $grid-unit solid $brand-secondary;
+        background-color: $gray-20;
+    }
+}
+
+.accordion-menu__sub-item {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    &.accordion-menu__item--active {
+        background-color: white;
+
+        a {
+            color: black;
+        }
+    }
+
+    a.accordion-menu__link {
+        padding-left: 25px;
+    }
+}
+
+@media (min-width: $medium-w) {
+    .accordion-menu {
+        left: auto;
+        position: relative;
+        transform: none;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
