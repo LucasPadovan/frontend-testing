@@ -9,7 +9,7 @@
     "bcrypt": "^2.0.1",
     "classnames": "^2.2.5",
     "meteor-node-stubs": "^0.3.2",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "popper.js": "^1.14.3",
     "prop-types": "^15.6.1",
     "react": "^16",
